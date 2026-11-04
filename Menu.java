@@ -4,45 +4,40 @@ public class Menu {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Metodos m = new Metodos();
-        boolean continuar = true;
-        System.out.println("Bienvenido a logica food");
-        System.out.println("que desea realizar");
-        while (continuar) {
-            switch (m.menu(sc)) {
+        Validacion v = new Validacion();
+        int n = m.PedirDimension(sc, v);
+        ObjVenta[][] Matriz = new ObjVenta[n][n];
+        boolean seguir = true;
+        while (seguir) {
+            switch (m.Menu(sc, v)) {
                 case 1:
-                    System.out.println("pagina en mantenimiento");
+                    Matriz = m.LLenar(Matriz, sc, v);
                     break;
                 case 2:
-                    System.out.println("pagina en mantenimiento");
+                    m.MostrarVentas(Matriz);
                     break;
-
                 case 3:
-                    System.out.println("pagina en mantenimiento");
-                    break;
 
+                    break;
                 case 4:
-                    System.out.println("pagina en mantenimiento");
-                    break;
 
+                    break;
                 case 5:
-                    System.out.println("pagina en mantenimiento");
-                    break;
 
+                    break;
                 case 6:
-                    System.out.println("pagina en mantenimiento");
-                    break;
 
+                    break;
                 case 7:
-                    System.out.println("pagina en mantenimiento");
-                    break;
 
+                    break;
                 case 8:
                     System.out.println("hasta luego");
-                    continuar = false;
+                    seguir = false;
                     break;
 
                 default:
-                    System.out.println("esta opcion no existe por favor valide");
+                    System.out.println("Opción no existe");
                     break;
             }
         }
