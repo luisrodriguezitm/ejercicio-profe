@@ -1,12 +1,21 @@
 public class Repuestos {
     private int Idrepuesto;
-    private int Categoria;
     private String Descripcion;
-    private Double PrecioUnitario;
     private int Cantidad;
     private int StockMinimo;
+    private Double Precio;
+    private  int Categoria;
 
     public Repuestos() {
+    }
+
+    public Repuestos(int idrepuesto, String descripcion, int cantidad, int stockMinimo, Double precio, int categoria) {
+        Idrepuesto = idrepuesto;
+        Descripcion = descripcion;
+        Cantidad = cantidad;
+        StockMinimo = stockMinimo;
+        Precio = precio;
+        Categoria = categoria;
     }
 
     public int getIdrepuesto() {
@@ -17,20 +26,12 @@ public class Repuestos {
         Idrepuesto = idrepuesto;
     }
 
-    public int getCategoria() {
-        return Categoria;
+    public String getDescripcion() {
+        return Descripcion;
     }
 
-    public void setCategoria(int categoria) {
-        Categoria = categoria;
-    }
-
-    public Double getPrecioUnitario() {
-        return PrecioUnitario;
-    }
-
-    public void setPrecioUnitario(Double precioUnitario) {
-        PrecioUnitario = precioUnitario;
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
     }
 
     public int getCantidad() {
@@ -49,12 +50,20 @@ public class Repuestos {
         StockMinimo = stockMinimo;
     }
 
-    public String getDescripcion() {
-        return Descripcion;
+    public Double getPrecio() {
+        return Precio;
     }
 
-    public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
+    public void setPrecio(Double precio) {
+        Precio = precio;
+    }
+
+    public int getCategoria() {
+        return Categoria;
+    }
+
+    public void setCategoria(int categoria) {
+        Categoria = categoria;
     }
 
 }
